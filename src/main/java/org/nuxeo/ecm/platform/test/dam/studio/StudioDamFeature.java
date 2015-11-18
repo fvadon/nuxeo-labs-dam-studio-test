@@ -31,7 +31,9 @@ import org.nuxeo.runtime.test.runner.SimpleFeature;
     "org.nuxeo.ecm.platform.picture.core",
     "org.nuxeo.ecm.platform.rendition.core",
     "org.nuxeo.ecm.platform.video.core",
-    "org.nuxeo.ecm.platform.audio.core"})
+    "org.nuxeo.ecm.platform.audio.core",
+    "org.nuxeo.ecm.automation.scripting",
+    "org.nuxeo.ecm.platform.web.common"})
 @LocalDeploy({"org.nuxeo.ecm.platform.test.dam.studio:OSGI-INF/fake-sqldirectory-contrib.xml"})
 @Features({ PlatformFeature.class, AutomationFeature.class })
 public class StudioDamFeature extends SimpleFeature {
