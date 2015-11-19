@@ -17,7 +17,6 @@
 package org.nuxeo.ecm.platform.test.dam.studio;
 
 import org.nuxeo.ecm.automation.test.AutomationFeature;
-import org.nuxeo.ecm.platform.test.PlatformFeature;
 import org.nuxeo.runtime.test.runner.Deploy;
 import org.nuxeo.runtime.test.runner.Features;
 import org.nuxeo.runtime.test.runner.LocalDeploy;
@@ -26,8 +25,7 @@ import org.nuxeo.runtime.test.runner.SimpleFeature;
 /**
  * @author <a href="mailto:fvadon@nuxeo.com">Fred Vadon</a>
  */
-@Deploy({"org.nuxeo.ecm.platform.picture.core",
-    "org.nuxeo.ecm.platform.commandline.executor",
+@Deploy({"org.nuxeo.ecm.platform.commandline.executor",
     "org.nuxeo.ecm.platform.picture.core",
     "org.nuxeo.ecm.platform.rendition.core",
     "org.nuxeo.ecm.platform.video.core",
@@ -35,7 +33,7 @@ import org.nuxeo.runtime.test.runner.SimpleFeature;
     "org.nuxeo.ecm.automation.scripting",
     "org.nuxeo.ecm.platform.web.common"})
 @LocalDeploy({"org.nuxeo.ecm.platform.test.dam.studio:OSGI-INF/fake-sqldirectory-contrib.xml"})
-@Features({ PlatformFeature.class, AutomationFeature.class })
+@Features({AutomationFeature.class })
 public class StudioDamFeature extends SimpleFeature {
 
 }
